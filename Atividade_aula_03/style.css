@@ -1,0 +1,138 @@
+/* CONFIGURAÇÕES DA PÁGINA */
+
+body {
+    margin: 0;
+    padding: 30px;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f5f5ff;
+    color: #333333;
+}
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background-color: #7c00e8;
+
+    border: 3px solid #3730a3;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: white;
+}
+
+.cabecalho h1 {
+    margin: 10px;
+}
+
+.cabecalho p {
+    margin: 0;
+}
+
+
+/* CONTEÚDO */
+
+.conteudo {
+    background-color: white;
+
+    border: 2px solid #c7d2fe;
+
+    padding: 25px;
+
+    margin-top: 25px;
+}
+
+
+/* SOBRE MIM */
+
+.sobre {
+    background-color: #f7f0fa;
+
+    border: 2px solid #818cf8;
+
+    padding: 20px;
+}
+
+.sobre h2 {
+    color: #7c00e8;
+}
+
+.sobre p {
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* DESTAQUE */
+
+.destaque {
+    color: #dc1744;
+
+    font-weight: bold;
+}
+
+
+/* HABILIDADES */
+
+.habilidades {
+    background-color: #faf0fb;
+
+    border: 2px solid #a78bfa;
+
+    padding: 20px;
+
+    margin-top: 25px;
+}
+
+.habilidades h2 {
+    color: #7c00e8;
+}
+
+.habilidades p {
+    font-size: 13px;
+}
+
+
+/* ETIQUETAS DAS HABILIDADES */
+
+.habilidades span {
+    display: inline-block;
+
+    background-color: #7c00e8;
+
+    color: white;
+
+    border: 2px solid #5b21b6;
+
+    padding: 8px;
+
+    margin: 5px;
+
+    font-size: 12px;
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+    background-color: #26004d;
+
+    color: white;
+
+    padding: 20px;
+
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.rodape p {
+    margin: 0;
+
+    font-size: 12px;
+}
