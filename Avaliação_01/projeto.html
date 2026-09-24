@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Define a codificação -->
+    <meta charset="UTF-8">
+    <!-- Adapta para celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título -->
+    <title>PETAlerta | Sobre o Projeto</title>
+    <!-- Conecta o CSS -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <!-- Barra superior -->
+    <div class="barra-superior">
+        <div>
+            UFOPA • SISTEMAS DE INFORMAÇÃO
+        </div>
+        <div>
+            PETAlerta • SOBRE O PROJETO
+        </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            PET<span>Alerta</span>
+        </a>
+        <!-- Botão voltar -->
+        <a href="index.html" class="botao-principal">
+            Voltar para o início
+        </a>
+    </header>
+
+    <!-- Conteúdo -->
+    <main>
+        <section class="secao pagina-projeto">
+            <p class="etiqueta">
+                SOBRE O PROJETO
+            </p>
+
+            <h1>
+                Olá, <span id="nome"></span>!
+            </h1>
+
+            <h2>
+                O que é o PETAlerta?
+            </h2>
+
+            <p class="texto-secao">
+                O PETAlerta é uma proposta de sistema voltada para o
+                monitoramento de animais em período pós-operatório
+                dentro de clínicas veterinárias.
+            </p>
+
+            <p class="texto-secao">
+                A ideia surgiu a partir da identificação de uma
+                dificuldade enfrentada durante o acompanhamento dos
+                animais. Os profissionais precisam realizar verificações
+                frequentes, mas uma alteração pode acontecer entre
+                uma verificação e outra.
+            </p>
+
+            <p class="texto-secao">
+                Para ajudar nesse processo, o PETAlerta propõe o uso
+                de câmeras, visão computacional e inteligência artificial.
+                As imagens dos animais podem ser analisadas pelo sistema
+                para identificar possíveis alterações de comportamento.
+            </p>
+
+            <p class="texto-secao">
+                Quando o sistema identifica uma situação que merece
+                atenção, a proposta é gerar um alerta para que o
+                profissional possa verificar o animal.
+            </p>
+
+            <!-- Resumo -->
+            <div class="card resumo-projeto">
+
+                <h3>
+                    Como funciona?
+                </h3>
+                <p>
+                    Câmeras captam as imagens → o sistema analisa
+                    os movimentos → possíveis alterações geram um
+                    alerta para a equipe.
+                </p>
+
+            </div>
+
+
+            <h2>
+                Objetivo
+            </h2>
+            <p class="texto-secao">
+                O objetivo do PETAlerta é auxiliar a equipe veterinária
+                no acompanhamento dos animais, contribuindo para um
+                monitoramento mais contínuo e organizado durante o
+                período pós-operatório.
+            </p>
+
+            <h2>
+                Tecnologias utilizadas
+            </h2>
+
+            <p class="texto-secao">
+                A proposta utiliza câmeras, visão computacional e
+                inteligência artificial para analisar as imagens
+                dos animais e auxiliar na identificação de possíveis
+                sinais de dor ou desconforto.
+            </p>
+
+            <!-- Botão -->
+            <div class="voltar">
+
+                <a href="index.html" class="botao-principal">
+                    Voltar para o site
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+
+        <p>
+            <strong>PETAlerta</strong> — Projeto acadêmico desenvolvido na UFOPA.
+        </p>
+
+        <p>
+            Monitoramento de animais no período pós-operatório.
+        </p>
+
+    </footer>
+    <!-- JavaScript da página -->
+    <script>
+
+        // Recupera o nome
+        const nome = localStorage.getItem("nomeUsuario");
+
+        // Mostra o nome
+        document.getElementById("nome").textContent = nome || "visitante";
+
+    </script>
+
+</body>
+
+</html>
