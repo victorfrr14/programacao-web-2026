@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel Semanal - Victor Ferreira</title>
+
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <div class="cabecalho">
+
+            <div class="identidade">
+
+                <img
+                    src="logo-target.png"
+                    alt="Target Comunicação"
+                    class="logo"
+                >
+
+                <div class="titulo">
+
+                    <h1>Painel Semanal</h1>
+
+                    <p>Victor Ferreira</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contador">
+
+                <span id="totalTarefas">0</span>
+
+                <small>tarefas</small>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- CADASTRO -->
+
+        <section class="cadastro">
+
+            <h2>Adicionar tarefa</h2>
+
+            <p>
+                Organize suas atividades durante a semana.
+            </p>
+
+
+            <form id="formulario">
+
+
+                <div class="campo">
+
+                    <label for="dia">
+                        Dia da semana
+                    </label>
+
+                    <select id="dia" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Segunda-feira">
+                            Segunda-feira
+                        </option>
+
+                        <option value="Terça-feira">
+                            Terça-feira
+                        </option>
+
+                        <option value="Quarta-feira">
+                            Quarta-feira
+                        </option>
+
+                        <option value="Quinta-feira">
+                            Quinta-feira
+                        </option>
+
+                        <option value="Sexta-feira">
+                            Sexta-feira
+                        </option>
+
+                        <option value="Sábado">
+                            Sábado
+                        </option>
+
+                        <option value="Domingo">
+                            Domingo
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="tarefa">
+                        Tarefa
+                    </label>
+
+                    <input
+                        type="text"
+                        id="tarefa"
+                        placeholder="Ex: Criar arte para cliente"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="horario">
+                        Horário
+                    </label>
+
+                    <input
+                        type="time"
+                        id="horario"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="prioridade">
+                        Prioridade
+                    </label>
+
+                    <select id="prioridade" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option value="Baixa">
+                            Baixa
+                        </option>
+
+                        <option value="Média">
+                            Média
+                        </option>
+
+                        <option value="Alta">
+                            Alta
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="botao-adicionar"
+                >
+
+                    + Adicionar tarefa
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <!-- PAINEL -->
+
+        <section class="painel">
+
+
+            <div class="titulo-lista">
+
+                <div>
+
+                    <h2>Minha semana</h2>
+
+                    <p>
+                        Arraste as tarefas para atualizar o andamento.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="limpar"
+                    class="botao-limpar"
+                >
+
+                    Limpar tudo
+
+                </button>
+
+            </div>
+
+
+
+            <div class="kanban">
+
+
+                <!-- A FAZER -->
+
+                <div
+                    class="coluna"
+                    data-status="a-fazer"
+                >
+
+                    <div class="cabecalho-coluna">
+
+                        <div class="titulo-coluna">
+
+                            <span class="bolinha azul"></span>
+
+                            <h3>A Fazer</h3>
+
+                        </div>
+
+                        <span
+                            class="quantidade"
+                            id="quantidadeAFazer"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="area-tarefas"
+                        id="aFazer"
+                    >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- EM EXECUÇÃO -->
+
+                <div
+                    class="coluna"
+                    data-status="em-execucao"
+                >
+
+                    <div class="cabecalho-coluna">
+
+                        <div class="titulo-coluna">
+
+                            <span class="bolinha amarelo"></span>
+
+                            <h3>Em Execução</h3>
+
+                        </div>
+
+                        <span
+                            class="quantidade"
+                            id="quantidadeExecucao"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="area-tarefas"
+                        id="emExecucao"
+                    >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FINALIZADO -->
+
+                <div
+                    class="coluna"
+                    data-status="finalizado"
+                >
+
+                    <div class="cabecalho-coluna">
+
+                        <div class="titulo-coluna">
+
+                            <span class="bolinha verde"></span>
+
+                            <h3>Finalizado</h3>
+
+                        </div>
+
+                        <span
+                            class="quantidade"
+                            id="quantidadeFinalizado"
+                        >
+                            0
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="area-tarefas"
+                        id="finalizado"
+                    >
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            Target Comunicação • Painel Semanal
+            • Victor Ferreira
+        </p>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
